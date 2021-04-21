@@ -31,6 +31,7 @@
 		.pp-drawer--close{
 			animation-name: pp-drawer--animate-close;
 		  	animation-duration: 0.3s;
+		  	width:0px;
 		}
 
 		.hidden{
@@ -87,11 +88,11 @@
 function run(){
 
 	var scrim = document.querySelector(".pp-drawer-scrim");
-	var drawer = document.querySelector(".pp-drawer");
-		
-		drawer.classList.remove("hidden");		
-		drawer.classList.add("pp-drawer--open");
-		scrim.classList.remove("hidden");
+	var drawer = document.querySelector(".pp-drawer");	
+	
+	drawer.classList.remove("hidden");
+	drawer.classList.add("pp-drawer--open");
+	scrim.classList.remove("hidden");
 	
 
 	scrim.addEventListener('click',function ___example(){
@@ -103,7 +104,7 @@ function run(){
 			drawer.classList.remove("pp-drawer--close");
 			drawer.classList.add("hidden");		
 			scrim.classList.add("hidden");
-	},200);		
+		},290);		
 		
 
 	});
