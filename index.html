@@ -17,9 +17,19 @@
 		  0%   {width:0px;}    
 		  100% {width:255px;}
 		}
+
+		@keyframes pp-drawer--animate-close {
+		  0%   {width:255px;}    
+		  100% {width:0px;}
+		}
 	
 		.pp-drawer--open{
 			animation-name: pp-drawer--animate-open;
+		  	animation-duration: 0.3s;
+		}
+
+		.pp-drawer--close{
+			animation-name: pp-drawer--animate-close;
 		  	animation-duration: 0.3s;
 		}
 
@@ -85,12 +95,16 @@ function run(){
 	
 
 	scrim.addEventListener('click',function ___example(){
+		scrim.removeEventListener("click",___example);
 		console.log("Work");
 		drawer.classList.remove("pp-drawer--open");
-		drawer.classList.add("hidden");		
-		scrim.classList.add("hidden");
-
-		scrim.removeEventListener("click",___example);
+		drawer.classList.add("pp-drawer--close");
+		setTimeout(function(){
+			drawer.classList.remove("pp-drawer--close");
+			drawer.classList.add("hidden");		
+			scrim.classList.add("hidden");
+	},200);		
+		
 
 	});
 
