@@ -78,10 +78,21 @@ function run(){
 
 	var scrim = document.querySelector(".pp-drawer-scrim");
 	var drawer = document.querySelector(".pp-drawer");
+		
+		drawer.classList.remove("hidden");		
+		drawer.classList.add("pp-drawer--open");
+		scrim.classList.remove("hidden");
+	
 
-	drawer.classList.remove("hidden");
-	drawer.classList.add("pp-drawer--open");
-	scrim.classList.remove("hidden");
+	scrim.addEventListener('click',function ___example(){
+		console.log("Work");
+		drawer.classList.remove("pp-drawer--open");
+		drawer.classList.add("hidden");		
+		scrim.classList.add("hidden");
+
+		scrim.removeEventListener("click",___example);
+
+	});
 
 }
 
