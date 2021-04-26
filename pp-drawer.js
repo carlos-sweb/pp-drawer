@@ -1,7 +1,7 @@
 /*!!
- * Power Panel Events <https://github.com/carlos-sweb/pp-events>
+ * Power Panel Drawer <https://github.com/carlos-sweb/pp-drawer>
  * @author Carlos Illesca
- * @version 1.0.5 (2020/03/24 22:27 PM)
+ * @version 1.0.0 (2020/04/26 14:15 PM)
  * Released under the MIT License
  */
 (function(global , factory ){
@@ -21,8 +21,13 @@
 })( this,(function(  ) {
 
 	return function( identy ){
-
-
+		/*
+		*@name ___lisenAnimation
+		*@type Function
+		*@description esta funcion dependiendo del evento 
+		* remueve la animacion que oportunamente tiene el mismo 
+		* nombre de la class que esta en el objecto
+		*/
 		function ___lisenAnimation(event){
 
 			var animation = event.animationName, target = event.target;	
@@ -33,9 +38,20 @@
 
 			target.classList.remove(animation);			
 		}	
-
+		/*
+		*@name __scrimClose
+		*@type boolean
+		*@description - Esta funcion describe si se debe cerrar el 
+		*drawer desde un click del scrim 		
+		*/
 		this.__srimClose = true;
-
+		/*
+		*@name scrimClose
+		*@type Function
+		*@params val = bollean
+		*@description - cambia el valor de __scrimClose, solo se aceptar valores
+		* boleanos
+		*/
 		this.scrimClose = function( val ){
 			if( val == true || val == false ){
 				if( val != this.__srimClose ){ 
@@ -43,18 +59,42 @@
 				}				
 			}
 		}
+		/*
+		*@name __open
+		*@type boolean
+		*@description - Esta variable muestra el 
+		*esta de drawer si esta abierto o cerrado
+		*/
 		this.__open = false;
-
+		/*
+		*@name isOpen
+		*@type Function
+		*@description - Funcion que retorna el valor boleano para 
+		* verificar si el drawer esta abierto
+		*/
 		this.isOpen = function (){
 			return this.__open;
 		}
-
+		/*
+		*@name drawer
+		*@type HtmlElement
+		*/
 		this.drawer = null;
-
+		/*
+		*@name drawer
+		*@type HtmlElement
+		*/
 		this.scrim = null;
 		// ------------------------------------------------------------------------
+		/*
+		*@name init
+		*@type Function
+		*@params : __identy = string
+		*description - Funcion que inicializa los elementos
+		*/
 		this.init = function( __identy ){
 			if( typeof __identy == 'string' ){
+						
 			var drawer = document.querySelector(".pp-drawer[drawer-id='"+__identy+"']");
 			var scrim = document.querySelector(".pp-drawer-scrim[drawer-id='"+__identy+"']");
 			if(drawer != null  && scrim != null  ){
@@ -69,12 +109,18 @@
 					}
 				}.bind(this));
 
-
+				// Verificamos que el __identy coincida
 			}else{console.warn("pp-drawer say :  drawer-id='"+__identy+"' no found");}			
 		}else{ console.warn("pp-drawer say : drawer-id must be string") }
 
 		}
 		// ------------------------------------------------------------------------
+		/*
+		*@name open
+		*@type Function
+		*@description - Funcion que ejecuta las animaciones de 
+		*apertura del drawer
+		*/
 		this.open = function( ){
 			if( this.drawer != null && this.scrim != null && this.__open == false ){
 
@@ -87,7 +133,13 @@
 
 			}
 		}
-		// ------------------------------------------------------------------------
+		// ------------------------------------------------------------------------			
+		/*
+		*@name close
+		*@type Function
+		*@description - Funcion que ejecuta las animaciones de 
+		*cierre del drawer
+		*/
 		this.close = function(){
 			 if( this.drawer != null && this.scrim != null && this.__open == true ){			 				 	
 		 		this.__open = false;
@@ -96,8 +148,8 @@
 			 }
 		}
 		// ------------------------------------------------------------------------
-		this.init(identy);
-		
+		// Se inicializa		
+		if( identy != undefined ){ this.init(identy); }
 	}
 
 }))
