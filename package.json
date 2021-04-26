@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/carlos-sweb/pp-drawer/issues"
   },
-  "homepage": "https://github.com/carlos-sweb/pp-drawer#readme",
-  "dependencies": {
-    "@material/elevation": "^11.0.0"
-  }
+  "homepage": "https://github.com/carlos-sweb/pp-drawer#readme"
 }
