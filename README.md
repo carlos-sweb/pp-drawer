@@ -1,9 +1,5 @@
 # pp-drawer.js
 
-```
-npm i pp-drawer.js --save
-```
-
 [Check Example](https://pp-drawer.netlify.app)
 
 ## Getting Started
@@ -11,8 +7,8 @@ npm i pp-drawer.js --save
 In the web project include pp-drawer.js with:
 
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.4/pp-drawer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.4/pp-drawer.min.js" ></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.5/pp-drawer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.5/pp-drawer.min.js" ></script>
 ```
 
 Or 
@@ -20,7 +16,7 @@ Or
 ## Install
 
 ```
-npm i pp-drawer --save
+npm i pp-drawer.js --save
 ```
 
 ## Initialize
