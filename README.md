@@ -47,6 +47,7 @@ drawer.close();
 ```
 ### scrimClose: [Function]
 <p>Default value true</p>
+
 ```javascript
 drawer.scrimClose(false);
 ```
