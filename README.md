@@ -11,8 +11,8 @@ npm i pp-drawer.js --save
 In the web project include pp-drawer.js with:
 
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.3/pp-drawer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.3/pp-drawer.min.js" ></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.4/pp-drawer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pp-drawer.js@1.0.4/pp-drawer.min.js" ></script>
 ```
 
 Or 

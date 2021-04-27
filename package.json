@@ -1,6 +1,6 @@
 {
   "name": "pp-drawer.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple drawer modal",
   "main": "pp-drawer.js",
   "scripts": {

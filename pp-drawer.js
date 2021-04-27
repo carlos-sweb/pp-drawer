@@ -1,7 +1,7 @@
 /*!!
  * Power Panel Drawer <https://github.com/carlos-sweb/pp-drawer>
  * @author Carlos Illesca
- * @version 1.0.3 (2020/04/26 14:15 PM)
+ * @version 1.0.4 (2020/04/26 14:15 PM)
  * Released under the MIT License
  */
 (function(global , factory ){
