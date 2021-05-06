@@ -7,8 +7,8 @@
 		@keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
 
 		.fadeIn {
-			-webkit-animation-duration: 0.3s;
-			animation-duration: 0.3s;			
+			-webkit-animation-duration: 0.2s;
+			animation-duration: 0.2s;			
 			-webkit-animation-fill-mode: both;
 			animation-fill-mode: both;
 			-webkit-animation-name: fadeIn;
@@ -19,8 +19,8 @@
 		@keyframes fadeOut {from {opacity: 1;}to {opacity: 0;}}
 
 		.fadeOut {
-			-webkit-animation-duration: 0.3s;
-			animation-duration: 0.3s;			
+			-webkit-animation-duration: 0.2s;
+			animation-duration: 0.2s;			
 			-webkit-animation-fill-mode: both;
 			animation-fill-mode: both;
 			-webkit-animation-name: fadeOut;
@@ -33,12 +33,12 @@
 	
 		.pp-drawer--open{
 			animation-name: pp-drawer--open;
-		  	animation-duration: 0.3s;
+		  	animation-duration: 0.2s;
 		}
 
 		.pp-drawer--close{
 			animation-name: pp-drawer--close;
-		  	animation-duration: 0.3s;
+		  	animation-duration: 0.2s;
 		  	width:0px;
 		}
 
